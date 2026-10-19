@@ -1,10 +1,6 @@
 package datos;
 
-/**
- * Dataset de entrenamiento. Contiene un nombre y cantidad de muestras.
- */
 public class Dataset {
-
     private String nombre;
     private int cantidadMuestras;
 
@@ -13,6 +9,11 @@ public class Dataset {
         this.cantidadMuestras = cantidadMuestras;
     }
 
-    public String getNombre() { return nombre; }
-    public int getCantidadMuestras() { return cantidadMuestras; }
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getCantidadMuestras() {
+        return cantidadMuestras;
+    }
 }

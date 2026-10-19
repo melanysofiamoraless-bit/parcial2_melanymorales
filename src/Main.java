@@ -1,8 +1,8 @@
+
 import datos.Dataset;
 import plataforma.Experimento;
 import plataforma.Plataforma;
 import usuarios.Investigador;
-
 /**
  * Escenario demostrativo — TODO estudiante: completar para evidenciar
  * el funcionamiento integral del sistema.

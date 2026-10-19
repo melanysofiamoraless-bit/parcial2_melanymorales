@@ -1,12 +1,6 @@
 package modelos;
 
-import datos.Dataset;
-
-/**
- * Modelo RNN. Hiperparámetro: número de capas.
- */
 public class ModeloRNN extends Modelo {
-
     private int numCapas;
 
     public ModeloRNN(String nombre, int maxEpocas, int numCapas) {
@@ -14,11 +8,13 @@ public class ModeloRNN extends Modelo {
         this.numCapas = numCapas;
     }
 
-    @Override
-    public double entrenar(Dataset dataset) {
-        // TODO: implementar
-        return 0;
+    public int getNumCapas() {
+        return numCapas;
     }
 
-    public int getNumCapas() { return numCapas; }
+    @Override
+    public double entrenar(Object d) {
+        registrarEpoca(10);
+        return mejorLoss();
+    }
 }

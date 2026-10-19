@@ -3,11 +3,7 @@ package usuarios;
 import plataforma.Experimento;
 import java.util.ArrayList;
 
-/**
- * Investigador que se ASOCIA a varios experimentos (N:M).
- */
 public class Investigador {
-
     private String nombre;
     private ArrayList<Experimento> experimentos;
 
@@ -16,11 +12,25 @@ public class Investigador {
         this.experimentos = new ArrayList<>();
     }
 
-    /** Asocia el investigador a un experimento existente. */
-    public void asociarExperimento(Experimento experimento) {
-        // TODO: implementar
+    public String getNombre() {
+        return nombre;
     }
 
-    public String getNombre() { return nombre; }
-    public ArrayList<Experimento> getExperimentos() { return experimentos; }
+    public ArrayList<Experimento> getExperimentos() {
+        return experimentos;
+    }
+
+    public void asociarExperimento(Experimento e) {
+        if (e != null) {
+            boolean yaExiste = false;
+            for (int i = 0; i < experimentos.size(); i++) {
+                if (experimentos.get(i) == e) {
+                    yaExiste = true;
+                }
+            }
+            if (!yaExiste) {
+                experimentos.add(e);
+            }
+        }
+    }
 }
